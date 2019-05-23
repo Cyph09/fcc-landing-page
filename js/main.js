@@ -1,11 +1,13 @@
-let mobileNav = document.querySelector(".mobile-nav");
-let toggleBtn = document.querySelector(".toggle-button");
-let toggleBtnBar = document.querySelector(".toggle-button__bar");
+let mainNav = document.querySelector(".main-nav");
+let toggleBtn = document.querySelector(".toggle-btn");
+
+console.log(mainNav);
+console.log(toggleBtn);
 
 toggleBtn.addEventListener("click", () => {
-  if (!mobileNav.classList.contains("open")) {
-    mobileNav.classList.add("open");
+  if (!mainNav.classList.contains("open")) {
+    mainNav.classList.add("open");
   } else {
-    mobileNav.classList.remove("open");
+    mainNav.classList.remove("open");
   }
 });

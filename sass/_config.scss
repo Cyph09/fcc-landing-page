@@ -1,0 +1,51 @@
+$primary-color:#64B9C5;
+$secondary-color:#0D8D9C;
+$dark-color:#363C43;
+$light-color:#B7B7C6;
+$accent1-color:#4BC033;
+$accent2-color:#946472;
+$success-color: #06b806;
+$danger-color:#ff0000;
+
+// Set text color based on background
+@function set-tex-color($color) {
+    @if(lightness($color)>60) {
+        @return #333;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+// Set bacgrounds & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-tex-color($color);
+}
+
+// margin and padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+
+    // All around margin
+    .m-#{$space} {
+        margin: #{space}rem;
+    }
+
+    // Vertcial margin
+    .my-#{$space} {
+        margin: #{space}rem 0;
+    }
+
+    // All around padding
+    .p-#{$space} {
+        padding: #{space}rem;
+    }
+
+    // Vertcial padding
+    .py-#{$space} {
+        padding: #{space}rem 0;
+    }
+}
