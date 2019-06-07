@@ -3,240 +3,261 @@
 @import "form";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: "Raleway", sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 // Main header
 .main-header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 1rem 1rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 10vh;
+  top: 0;
+  background-color: transparent;
+  box-shadow: 0 1px 10px 1px rgba($color: #000000, $alpha: 03);
+  transition: all 0.2s ease-in;
+
+  .main-header__brand {
     display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 12vh;
-    top: 0;
-    opacity: 0.5;
-    background-color: $secondary-color;
-    transition: all 1s ease-in;
+    margin-bottom: 1.5rem;
 
-    .main-header__brand {
-        display: flex;
-        margin-bottom: 1.5rem;
-
-        .main-header__logo {
-            position: absolute;
-            top: 0.7rem;
-            left: 0.5rem;
-        }
-
-        .toggle-btn {
-            position: absolute;
-            top: 0.7rem;
-            right: 0.5rem;
-        }
+    .main-header__logo {
+      position: absolute;
+      //   top: 0.7rem;
+      //   left: 0.5rem;
+      //   padding-top: 0.8rem;
+      transition: all 0.2s ease-in;
     }
 
-    ul {
-        display: flex;
+    .toggle-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      padding-top: 0.8rem;
     }
+  }
 
-    a {
-        color: #fff;
-        padding: 0.5rem;
-        margin: 0 0.25rem;
+  .main-nav {
+    height: 100%;
 
-        &:hover {
+    .main-nav__items {
+      display: flex;
+
+      .main-nav__item {
+        a {
+          padding: 0.6rem;
+          margin: 0 0.25rem;
+
+          &:hover {
             color: $primary-color;
+          }
         }
+      }
     }
+  }
 }
 
 .main-header__shrink {
-    padding: 0.7rem 1rem;
-    background-color: $primary-color;
+  padding: 0.7rem 1rem;
+  background-color: $primary-color;
+  opacity: 1;
+  height: 8vh;
+  box-shadow: none;
+
+  .main-header__brand {
+    .main-header__logo {
+      padding-top: 0;
+    }
+  }
+
+  .toggle-btn {
+    padding-top: 0;
+  }
 }
 
 // Main Navigation
 
 .main-nav {
-    display: none;
-    margin: 3rem auto;
+  display: none;
+  margin: 3rem auto;
 
-    .main-nav__items {
-        flex-direction: column;
-    }
+  .main-nav__items {
+    flex-direction: column;
+  }
 }
 
 // open
 .open {
-    display: block;
+  display: block;
 }
 
 section {
-    width: 100vw;
-    // margin: 3rem auto;
-    padding: 1.2rem 2rem;
+  width: 100vw;
+  // margin: 3rem auto;
+  padding: 1.2rem 2rem;
 
-    .section-text {
-        text-align: center;
-    }
+  .section-text {
+    text-align: center;
+  }
 }
 
 #landing {
-    background-color: $primary-color;
-    color: #fff;
-    height: 100vh;
+  background-color: $primary-color;
+  color: #fff;
+  height: 100vh;
 }
 
 #about {
-    background: whitesmoke;
+  background: whitesmoke;
 }
 
 #download {
-    background-color: rgba($color: #0907b6, $alpha: 0.45);
-    background-image: url("../images/download.jpg");
-    background: rgba($color: #000000, $alpha: 0.4) url("../images/download.jpg") left 10% bottom 50%/cover no-repeat border-box;
-    background-blend-mode: multiply;
-    height: 60%;
-    text-align: center;
-    color: #fff;
+  background-color: rgba($color: #0907b6, $alpha: 0.45);
+  background-image: url("../images/download.jpg");
+  background: rgba($color: #000000, $alpha: 0.4) url("../images/download.jpg")
+    left 10% bottom 50% / cover no-repeat border-box;
+  background-blend-mode: multiply;
+  height: 60%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .section-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
 
-    .section-buttons {
-        display: flex;
-        width: 70%;
-        flex-wrap: wrap;
-
-        .download-btn {
-            margin: 0.7rem auto;
-            padding: 1.5rem 3rem;
-        }
+    .download-btn {
+      margin: 0.7rem auto;
+      padding: 1.5rem 3rem;
     }
+  }
 }
 
 #pricing {
-    background: whitesmoke;
+  background: whitesmoke;
 
-    .packages {
+  .packages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .package {
+    background: white;
+    width: 70vw;
+    height: 60%;
+    margin: 1rem;
+    text-align: center;
+    color: lighten($color: $dark-color, $amount: 15%);
+    box-shadow: 1px 1px 10px 0 rgba($color: #000000, $alpha: 0.45);
+    border-radius: 4px;
+
+    .package-title {
+      h3 {
+        text-transform: uppercase;
+        padding: 1.4rem 0;
+      }
+
+      .price {
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-    }
+        background: $light-color;
+        color: white;
+        padding: 1.2rem;
 
-    .package {
-        background: white;
-        width: 70vw;
-        height: 60%;
-        margin: 1rem;
-        text-align: center;
-        color: lighten($color: $dark-color, $amount: 15%);
-        box-shadow: 1px 1px 10px 0 rgba($color: #000000, $alpha: 0.45);
-        border-radius: 4px;
-
-        .package-title {
-            h3 {
-                text-transform: uppercase;
-                padding: 1.4rem 0;
-            }
-
-            .price {
-                display: flex;
-                justify-content: center;
-                background: $light-color;
-                color: white;
-                padding: 1.2rem;
-
-                .text-top {
-                    position: relative;
-                    top: -20px;
-                    font-size: 1.4rem;
-                    padding-right: 0.7rem;
-                }
-
-
-
-                .text-bottom {
-                    font-size: 1.4rem;
-                }
-            }
+        .text-top {
+          position: relative;
+          top: -20px;
+          font-size: 1.4rem;
+          padding-right: 0.7rem;
         }
 
-        .package-list {
-            padding: 1.2rem 0;
-            text-transform: capitalize;
-            line-height: 2rem;
+        .text-bottom {
+          font-size: 1.4rem;
         }
+      }
     }
+
+    .package-list {
+      padding: 1.2rem 0;
+      text-transform: capitalize;
+      line-height: 2rem;
+    }
+  }
 }
 
 @media screen and (min-width: 40rem) {
-    .main-nav {
-        display: block;
-        margin: 0;
+  .main-nav {
+    display: block;
+    margin: 0;
 
-        .main-nav__items {
-            flex-direction: row;
-        }
+    .main-nav__items {
+      flex-direction: row;
+    }
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  #about {
+    display: flex;
+  }
+
+  #download {
+    height: 60vh;
+
+    .section-buttons {
+      flex-direction: row;
+    }
+  }
+
+  #pricing {
+    .packages {
+      flex-direction: row;
     }
 
-    .toggle-btn {
-        display: none;
+    .package {
+      width: 30%;
     }
-
-    #about {
-        display: flex;
-    }
-
-    #download {
-        height: 60vh;
-
-        .section-buttons {
-            flex-direction: row;
-        }
-    }
-
-    #pricing {
-        .packages {
-            flex-direction: row;
-        }
-
-        .package {
-            width: 30%;
-
-        }
-    }
+  }
 }
