@@ -21,7 +21,10 @@ toggleBtn.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   // const scrolled = window.scrollY;
   // console.log(scrolled);
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (
+    document.body.scrollTop > 50 ||
+    (document.documentElement.scrollTop > 50 && window.innerWidth > 640)
+  ) {
     document.querySelector(".main-header").classList.add("main-header__shrink");
   } else {
     document
