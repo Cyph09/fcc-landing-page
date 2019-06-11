@@ -31,19 +31,9 @@
         <li class="main-nav__item"><a href="#features">Features</a></li>
         <li class="main-nav__item"><a href="#download">Download</a></li>
         <li class="main-nav__item"><a href="#pricing">Pricing</a></li>
-        <li class="main-nav__item"><a href="#subscribe">Subscribe</a></li>
+        <li class="main-nav__item"><a href="#subscribe" class=" cta-btn">Subscribe</a></li>
       </ul>
     </nav>
-    <!-- <nav class="mobile-nav">
-            <ul class="mobile-nav__items">
-                <li class="mobile-nav__item"><a href="#landing">Home</a></li>
-                <li class="mobile-nav__item"><a href="#about">About App</a></li>
-                <li class="mobile-nav__item"><a href="#features">Features</a></li>
-                <li class="mobile-nav__item"><a href="#download">Download</a></li>
-                <li class="mobile-nav__item"><a href="#pricing">Pricing</a></li>
-                <li class="mobile-nav__item"><a href="#subscribe">Subscribe</a></li>
-            </ul>
-        </nav> -->
   </header>
 
   <!-- Main Layout -->
@@ -64,8 +54,8 @@
             distinctio.
           </p>
           <div class="landing-inner_btns">
-            <a href="#download" class="btn">Download</a>
-            <a href="#about" class="btn">Learn More</a>
+            <a href="#download" class="btn btn-accent1">Download</a>
+            <a href="#about" class="btn btn-accent1">Learn More</a>
           </div>
         </div>
       </div>
@@ -74,7 +64,7 @@
 
     <!-- About product -->
     <section id="about">
-      <div class="about-left  text-center">
+      <div class="about-left">
         <h1 class="large">About <span class="large-span">ToDoApp</span></h1>
         <h3 class="small">Best To do App</h3>
         <p class="lead">
@@ -85,7 +75,10 @@
         </p>
       </div>
       <div class="about-right">
-        <img src="images/iphone1.png" alt="App screenshot" />
+        <video controls>
+          <source src="images/sketch.mp4" type="video/mp4">
+          <p>Your browser doesn't support HTML5 video. Here is a <a href="#">link to a video</a>instead</p>
+        </video>
       </div>
     </section>
 
@@ -97,7 +90,7 @@
           <div class="feature-icon"><i class="fas fa-tools"></i></div>
           <div class="feature-text">
             <h4 class="small">Unlimited Features</h4>
-            <p>
+            <p class="lead">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
               accusamus deserunt aliquid possimus, necessitatibus, consequuntur
               nesciunt quia quam dolorum corrupti aut inventore aspernatur
@@ -109,7 +102,7 @@
           <div class="feature-icon"><i class="fas fa-cogs"></i></div>
           <div class="feature-text">
             <h4 class="small">Easy to Customize</h4>
-            <p>
+            <p class="lead">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
               accusamus deserunt aliquid possimus, necessitatibus, consequuntur
               nesciunt quia quam dolorum corrupti aut inventore aspernatur
@@ -121,7 +114,7 @@
           <div class="feature-icon"><i class="fas fa-cloud"></i></div>
           <div class="feature-text">
             <h4 class="small">Cloud Access</h4>
-            <p>
+            <p class="lead">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
               accusamus deserunt aliquid possimus, necessitatibus, consequuntur
               nesciunt quia quam dolorum corrupti aut inventore aspernatur
@@ -133,7 +126,7 @@
           <div class="feature-icon"><i class="fas fa-check"></i></div>
           <div class="feature-text">
             <h4 class="small">Realiable</h4>
-            <p>
+            <p class="lead">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
               accusamus deserunt aliquid possimus, necessitatibus, consequuntur
               nesciunt quia quam dolorum corrupti aut inventore aspernatur
@@ -145,7 +138,7 @@
           <div class="feature-icon"><i class="fas fa-user-cog"></i></div>
           <div class="feature-text">
             <h4 class="small">Great Support</h4>
-            <p>
+            <p class="lead">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
               accusamus deserunt aliquid possimus, necessitatibus, consequuntur
               nesciunt quia quam dolorum corrupti aut inventore aspernatur
@@ -157,7 +150,7 @@
           <div class="feature-icon"><i class="fas fa-user-cog"></i></div>
           <div class="feature-text">
             <h4 class="small">Great Support</h4>
-            <p>
+            <p class="lead">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
               accusamus deserunt aliquid possimus, necessitatibus, consequuntur
               nesciunt quia quam dolorum corrupti aut inventore aspernatur
@@ -219,14 +212,14 @@
               <li>Item five</li>
             </ul>
             <div class="price-btn">
-              <button class="btn">Purchase</button>
+              <button class="btn btn-dark">Purchase</button>
             </div>
           </div>
         </div>
         <div class="package">
           <div class="package-title">
             <h3>Standard</h3>
-            <div class="price">
+            <div class="price cta-package">
               <h4>
                 <span class="text-top">$</span>
                 <span class="large">69<span class="text-bottom">/month</span></span>
@@ -242,7 +235,7 @@
               <li>Item five</li>
             </ul>
             <div class="price-btn">
-              <button class="btn">Purchase</button>
+              <button class="btn btn-accent1">Purchase</button>
             </div>
           </div>
         </div>
@@ -265,7 +258,7 @@
               <li>Item five</li>
             </ul>
             <div class="price-btn">
-              <button class="btn">Purchase</button>
+              <button class="btn btn-dark">Purchase</button>
             </div>
           </div>
         </div>
@@ -301,7 +294,7 @@
       <a href="#"><i class="fab fa-freecodecamp"></i></a>
     </div>
     <div class="footer-text text-center">
-      Copyright @ 2019 <a href="#">Swaleh Mhina</a>
+      <p>Copyright @ 2019 <a href="#">Swaleh Mhina</a></p>
     </div>
   </footer>
   <script src="js/main.js"></script>
