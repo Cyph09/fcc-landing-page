@@ -317,10 +317,13 @@ section {
     background: $dark-color;
 
     .footer-links {
+
         a {
             color: $light-color;
             font-size: 2rem;
+            margin: 0.5rem;
             cursor: pointer;
+            transition: 0.2s;
 
             &:hover {
                 color: lighten($color: $light-color, $amount: 50%);
@@ -331,6 +334,7 @@ section {
     .footer-text {
         color: #fff;
     }
+
 }
 
 /* Extra small devices (phones, 600px and down) */
